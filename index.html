@@ -9,7 +9,68 @@
   </head>
   <body>
 
-    <h1>Hola Mundo</h1>
 
+  <!-- NAVBAR -->
+    <nav class="navbar" id="navigation">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </a>
+      </span>
+
+      <ul class="navbar-nav" id="mainNav">
+        <div class="nav-left">
+          <li class="logo" id="navLi"><b>LIGHT-FLAVOR</b></li>
+        </div>
+        <div class="nav-right">
+          <li><a href="#main">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Resume</a>
+      <a href="#">Works</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- MAIN SECTION -->
+    <section class="section-main" id='main'>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-about" id="about">
+
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="section-resume" id="resume">
+
+    </section>
+
+    <!-- WORKS SECTION -->
+    <section class="section-works" id="works">
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-contact" id="contact">
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="dist/js/main.js"></script>
   </body>
 </html>
