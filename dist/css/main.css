@@ -8,11 +8,11 @@
   padding: 0; }
 
 body {
-  font-family: "Arial", Serif;
   background-color: #f4f4f4;
   overflow-x: hidden;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Raleway', sans-serif; }
 
 .hamburger {
   padding: 5px;
@@ -29,7 +29,10 @@ body {
   margin-top: 8px; }
 
 .active a {
-  text-decoration: line-through; }
+  text-decoration: line-through !important; }
+
+.active a:hover {
+  color: #fff !important; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0);
@@ -38,7 +41,8 @@ body {
   border-bottom: 1px solid #fff;
   position: fixed;
   width: 100%;
-  transition: .5s; }
+  transition: .5s;
+  z-index: 999; }
 
 .navbar a {
   float: right;
@@ -46,6 +50,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 14px 16px;
+  text-decoration: none;
   font-size: 20px;
   transition: all .5s; }
 
@@ -74,13 +79,13 @@ li.logo {
   justify-content: flex-end; }
 
 .navbar a:hover {
-  color: #000; }
+  color: #777777; }
 
 .side-nav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   background-color: #111;
@@ -128,12 +133,97 @@ li.logo {
   overflow: hidden;
   background-image: url("../img/fullscreen_image.JPG");
   background-position: center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main main2"; }
+  .section-main .main-content {
+    grid-area: main; }
+  .section-main h1.main-heading {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+    position: relative; }
+  .section-main .profession {
+    color: #fff;
+    top: 40%;
+    position: relative;
+    text-align: center;
+    transition: all 1s; }
+  .section-main .social_icons {
+    grid-area: main;
+    top: 45%;
+    position: relative;
+    text-align: center; }
+  .section-main .social_icons li {
+    display: inline; }
+  .section-main .social_icons li .icon-outer {
+    height: 55px;
+    width: 55px; }
+  .section-main .custom-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 1s; }
+  .section-main .custom-icon:hover {
+    height: 50px;
+    width: 50px; }
+  .section-main .facebook:hover {
+    background-color: #3b5998;
+    border: 1px solid #3b5998; }
+  .section-main .twitter:hover {
+    background-color: #1dcaff;
+    border: 1px solid #1dcaff; }
+  .section-main .instagram:hover {
+    background-color: #bc2a8d;
+    border: 1px solid #bc2a8d; }
+  .section-main .pinterest:hover {
+    background-color: #C92228;
+    border: 1px solid #C92228; }
+  .section-main .dribbble:hover {
+    background-color: #ea4c89;
+    border: 1px solid #ea4c89; }
+  .section-main .social_icons a {
+    text-decoration: none; }
+  .section-main .section-main .social_icons a:hover {
+    border: 2px solid transparent; }
+  .section-main .section-main .overlay .social_icons a + a {
+    margin-left: 10px; }
+  @media (max-width: 769px) {
+    .section-main h1.main-heading {
+      font-size: 2rem;
+      margin: 0 auto;
+      width: 90%;
+      display: block; } }
 
 .section-about {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   overflow: hidden; }
+  .section-about .about-heading {
+    font-size: 3rem;
+    top: 5rem;
+    text-align: center;
+    margin-top: 6rem; }
+  .section-about .section-title::after {
+    position: absolute;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 1px;
+    content: '';
+    background: #000; }
+  .section-about img.profile-image {
+    height: 350px;
+    width: 350px;
+    margin: 4rem auto;
+    border-radius: 100%;
+    display: block; }
 
 .section-resume {
   height: 100vh;
