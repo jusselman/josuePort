@@ -1,0 +1,15 @@
+
+@mixin sectionHeader {
+  font-size: 3.5rem;
+  top: 5rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+@mixin headerBar {
+  position: absolute;
+  left: calc(50% - 28px);
+  width: 70px;
+  height: 1px;
+  content: '';
+}

@@ -1,0 +1,110 @@
+// CONTACT SECTION //
+
+  .section-contact {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    background-image: url("../img/contactbg.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 250px;
+
+    .contact-heading {
+      @include sectionHeader;
+      color: #fff;
+    }
+
+    .section-title::after {
+      @include headerBar;
+      background: #fff;
+    }
+
+    .contact-wrapper {
+      width: 100%;
+      margin-top: 75px;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+          "blank form";
+        }
+
+      .contact-form {
+        grid-area: form;
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .contact-form h1 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 25px;
+      }
+
+      form {
+        display: grid;
+      }
+
+
+      .contact-input {
+        width: 100%;
+        padding: 10px;
+        height: 3.25rem;
+        margin: 0 auto;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        min-width: 375px;
+      }
+
+      .contact-message {
+        height: 9rem;
+      }
+
+      button.contact-button {
+        width: 30%;
+        background-color: #fff;
+        color: #000;
+        transition: all 1s;
+        border: none;
+        font-size: 1.5rem;
+        padding: 8px;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      button.contact-button:hover {
+        color: #fff;
+        background-color: #000;
+      }
+
+
+
+@media(max-width:999px) {
+  .section-contact {
+    // height: auto !important;
+  }
+  .contact-wrapper {
+  display: block !important;
+    }
+    button.contact-button {
+      margin: 0 auto;
+    }
+  }
+
+  @media(max-width:769px) {
+    .section-contact {
+      padding-bottom: -150px !important;
+    }
+    .contact-form {
+      width: 90%;
+    }
+  }
+
+  @media(max-width:540px) {
+      .contact-input {
+      min-width: 0 !important;
+
+    }
+  }
+}

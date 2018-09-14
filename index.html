@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
     <title>Light-Flavor</title>
   </head>
   <body>
@@ -25,36 +26,36 @@
 
       <ul class="navbar-nav" id="mainNav">
         <div class="nav-left">
-          <li class="logo" id="navLi"><b>LIGHT-FLAVOR</b></li>
+          <li class="logo"><b>LIGHT-FLAVOR</b></li>
         </div>
         <div class="nav-right">
-          <li><a href="#main">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#main" class="scroll">Home</a></li>
+          <li><a href="#about" class="scroll">About</a></li>
+          <li><a href="#works" class="scroll">Works</a></li>
+          <li><a href="#resume" class="scroll">Résumé</a></li>
+          <li><a href="#contact" class="scroll">Contact</a></li>
         </div>
       </ul>
     </nav>
 
     <div id="side-menu" class="side-nav">
       <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-      <a href="#main">Home</a>
-      <a href="#about">About</a>
-      <a href="#resume">Resume</a>
-      <a href="#works">Works</a>
-      <a href="#contact">Contact</a>
+      <a href="#main" class="scroll">Home</a>
+      <a href="#about" class="scroll">About</a>
+      <a href="#resume" class="scroll">Résumé</a>
+      <a href="#works" class="scroll">Works</a>
+      <a href="#contact" class="scroll">Contact</a>
     </div>
 
     <!-- MAIN SECTION -->
     <section class="section-main" id='main'>
       <div class="main-content">
-      <h1 class="main-heading fadeInLeft">JOSHUA USSELMAN</h1>
+      <h1 class="main-heading fadeInTop">JOSHUA USSELMAN</h1>
       <!-- PROFESSIONS FADING IN AND OUT -->
-      <h1 class="profession"><span id="faded"></span></h1>
+      <h1 class="profession fadeInTop" id="profession"><span id="faded"></span></h1>
 
       <!-- <div "> -->
-        <ul class="social_icons fadeInUp">
+        <ul class="social_icons fadeInBottom">
           <li class="icon-outer">
             <a href="https://www.facebook.com/josue.uselmano">
               <i class="fab fa-facebook fa-2x custom-icon facebook"></i>
@@ -87,29 +88,149 @@
 
     <!-- ABOUT SECTION -->
     <section class="section-about" id="about">
+      <div class="about-container">
       <div class="section-title">
         <h1 class="about-heading">ABOUT</h1>
       </div>
-        <img class="profile-image" src="dist/img/profile.jpg">
+        <img class="profile-image" src="dist/img/profile.jpg" alt="profile">
       <div class="about-description">
-        <p>
+        <p class="description">My name is <strong>Joshua Usselman</strong>.
+          A <strong>Web Developer</strong>, <strong>UI/UX Designer</strong>,
+          <strong>Photographer,</strong> and <strong>Epicurean</strong>
+           who provides the most delicious tints, shades, and tones.
+         </p>
+         <br>
+          <p class="description">A native of <strong>Portland</strong>,
+            <strong>Oregon</strong>, have shined in
+          <strong>Palma de Mallorca</strong>, <strong>Guadalajara</strong>,
+          and currently <strong>San Francisco</strong>. My objective is to make
+          the whole world synesthetic by any means necessary.
+          </p>
+      </div>
+      <div>
+        <img src="dist/img/grapes.png" alt="grapes" class="grapes">
+      </div>
+      <div>
+        <a href="#resume" class="resume-button scroll">
+          <p class="resume-button">RÉSUMÉ</p>
+        </a>
       </div>
 
-
-    </section>
-
-    <!-- RESUME SECTION -->
-    <section class="section-resume" id="resume">
-
+    </div>
     </section>
 
     <!-- WORKS SECTION -->
     <section class="section-works" id="works">
+      <div class="works-container">
+        <div class="section-title">
+          <h1 class="works-heading">WORKS</h1>
 
+      </div>
+    </div>
     </section>
+
+    <!-- RESUME SECTION -->
+    <section class="section-resume" id="resume">
+      <div class="section-title">
+        <h1 class="resume-heading">RÉSUMÉ</h1>
+        </div>
+          <div class="resume-container">
+            <div class="resume-education">
+              <h1 class="education-header">EDUCATION</h1>
+              <div class="wrapper">
+                <div class="res-date"><p><span class="darker">2017 - 2018</span></p></div>
+                <div class="res-prog"><h2>WEB DEVELOPMENT</h2></div>
+                <div class="res-place"><p><span class="darker">CODIFY ACADEMY</span></p></div>
+                <div class="res-desc"><p>Peering over the San Francisco bay,
+                   this institute fostered and refined my interests in web
+                   development user-experienc and design. While always a coder
+                    at heart, Codify reinforced my abilities to further express
+                     my artistic inclinations.</p></div>
+            </div>
+            <div class="wrapper">
+              <div class="res-date"><p><span class="darker">2003 - 2007</span></p></div>
+              <div class="res-prog"><h2>BA ESPAÑOL</h2></div>
+              <div class="res-place"><p><span class="darker">University of Oregon</span></p></div>
+              <div class="res-desc"><p>In the heart of the Emerald Valley, U of O bestowed upon me
+                the gift of Romance Languages, including Spanish, French, Portuguese and Italian.
+                What's more, I devoted an entire academic year to the history of Western Art,
+                from cave paintings to Andy Warhol.</p></div>
+          </div>
+          <div class="wrapper">
+            <div class="res-date"><p><span class="darker">2005</span></p></div>
+            <div class="res-prog"><h2>SEMESTER OVERSEAS</h2></div>
+            <div class="res-place"><p><span class="darker">Universidad de Oviedo</span></p></div>
+            <div class="res-desc"><p>Nestled in the northern, mountainous state of Oviedo, this program
+              abroad immersed me Spanish history, art, and gastronomy. My first time living abroad,
+              this sojourn to the old country sparked an unquenchable thirst for travel.</p></div>
+        </div>
+          </div>
+
+
+            <div class="resume-professional">
+              <h1 class="professional-header">PROFESSIONAL</h1>
+              <div class="wrapper">
+                <div class="res-date"><p><span class="darker">2017 - 2018</span></p></div>
+                <div class="res-prog"><h2>WEB DEVELOPMENT</h2></div>
+                <div class="res-place"><p><span class="darker">CODIFY ACADEMY</span></p></div>
+                <div class="res-desc"><p>Peering over the San Francisco bay,
+                   this institute fostered and refined my interests in web
+                   development user-experienc and design. While always a coder
+                    at heart, Codify reinforced my abilities to further express
+                     my artistic inclinations.</p></div>
+            </div>
+            <div class="wrapper">
+              <div class="res-date"><p><span class="darker">2003 - 2007</span></p></div>
+              <div class="res-prog"><h2>BA ESPAÑOL</h2></div>
+              <div class="res-place"><p><span class="darker">University of Oregon</span></p></div>
+              <div class="res-desc"><p>In the heart of the Emerald Valley, U of O bestowed upon me
+                the gift of Romance Languages, including Spanish, French, Portuguese and Italian.
+                What's more, I devoted an entire academic year to the history of Western Art,
+                from cave paintings to Andy Warhol.</p></div>
+          </div>
+          <div class="wrapper">
+            <div class="res-date"><p><span class="darker">2005</span></p></div>
+            <div class="res-prog"><h2>SEMESTER OVERSEAS</h2></div>
+            <div class="res-place"><p><span class="darker">Universidad de Oviedo</span></p></div>
+            <div class="res-desc"><p>Nestled in the northern, mountainous state of Oviedo, this program
+              abroad immersed me Spanish history, art, and gastronomy. My first time living abroad,
+              this sojourn to the old country sparked an unquenchable thirst for travel.</p></div>
+        </div>
+            </div>
+
+
+
+    </div>
+    </section>
+
+
 
     <!-- CONTACT SECTION -->
     <section class="section-contact" id="contact">
+      <div class="contact-container">
+        <div class="section-title">
+          <h1 class="contact-heading">CONTACT</h1>
+        </div>
+
+          <div class="contact-wrapper">
+
+            <form id="contact-form" method="post" class="contact-form">
+            <h1>DROP ME A LINE</h1>
+            <!-- <div class="form-input"> -->
+            <input type="text" class="contact-input" placeholder="NAME" required><br>
+            <input type="text" class="contact-input" placeholder="EMAIL" required><br>
+            <textarea name="message" class="contact-input contact-message" rows="4" placeholder="MESSAGE" required></textarea><br>
+          <!-- </div> -->
+            <button class="contact-button">SEND</button>
+          </form>
+          </div>
+      </div>
+    </div>
+
+    </section>
+
+    <section class="section-map">
+
 
     </section>
 
@@ -117,9 +238,12 @@
 
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="dist/js/main.js"></script>
-  </body>
+    <script type="text/javascript" src="dist/js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC2nsUvCHt2wGmSa5eCVyLROA8ejAv-oE&callback=initMap" type="text/javascript"></script> -->
+    </body>
 </html>

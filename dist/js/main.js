@@ -11,27 +11,6 @@ function closeSlideMenu(){
   // document.getElementById('main').style.marginLeft = '0';
 }
 
-// navbar change color on scroll //
-// window.onscroll = function() {scrollFunction()};
-//
-//
-//
-// function scrollFunction() {
-//   if (document.documentElement.scrollTop > 80) {
-//     document.getElementById("navbar").style.background = "#fff";
-//     document.getElementById("navLi").style.color = "#000";
-//
-//   } else {
-//     document.getElementById("navbar").style.background = "rgba(0,0,0,0)";
-//     document.getElementById("navLi").style.color = "fff";
-//   }
-// }
-// $(function () {
-//   $(document).scroll(function () {
-// 	  var $nav = $(".navbar-fixed-top");
-// 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-// 	});
-// });
 
 jQuery(document).ready(function($){
 	$(window).scroll(function(){
@@ -58,73 +37,70 @@ jQuery(document).ready(function($){
 	});
 });
 
-// Cache selectors
-var lastId,
- topMenu = $("#mainNav"),
- topMenuHeight = topMenu.outerHeight()+1,
- // All list items
- menuItems = topMenu.find("a"),
- // Anchors corresponding to menu items
- scrollItems = menuItems.map(function(){
-   var item = $($(this).attr("href"));
-    if (item.length) { return item; }
- });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "\\#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({
-      scrollTop: offsetTop
-  }, 850);
-  e.preventDefault();
-});
+// SMOOTH SCROLLING JQUERY //
 
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+$(document).ready(function() {
 
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
+  var scrollLink = $('.scroll');
 
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href=\\#"+id+"]").parent().addClass("active");
-   }
-});
+  // Smooth scrolling
+  scrollLink.click(function(event) {
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1250 );
+  });
+
+  // Active link switching
+  $(window).scroll(function() {
+    var scrollbarLocation = $(this).scrollTop();
+
+    scrollLink.each(function() {
+
+      var sectionOffset = $(this.hash).offset().top;
+
+      if ( sectionOffset <= scrollbarLocation ) {
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+      }
+    })
+  })
+})
 
 
 // SCROLL REVEAL //
 if (window.innerWidth > 769) {
  window.sr = ScrollReveal();
-  sr.reveal('.fadeInLeft', {
+  sr.reveal('.fadeInTop', {
     duration: 2500,
     origin: 'top',
     distance: '200px'
   });
-  sr.reveal('.fadeInTop', {
+  sr.reveal('.fadeInBottom', {
     duration: 2500,
     origin: 'bottom',
     distance: '200px'
   });
+  sr.reveal('.fadeInBottomLight', {
+    duration: 3500,
+    origin: 'bottom',
+    distance: '100px'
+  });
+  // sr.reveal('.fadeInHere', {
+  //   duration: 2500,
+  //   origin: 'bottom',
+  //   distance: '5px'
+  // });
 };
+
+// $('#profession').hide().fadeIn('slow');
 
 
 // PROFESSION FADER //
 
 var faded_i = 0;
-var faded_array = ["Web Designer", "UI/UX Designer", "Photographer", "Epicurean"];
+var faded_array = ["Web Developer", "UI/UX Designer", "Photographer", "Epicurean"];
 var faded_elem;
 faded_elem = document.getElementById('faded'); fadedSlide();
 function fadedNext() {
