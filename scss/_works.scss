@@ -1,0 +1,165 @@
+// WORKS SECTION //
+
+
+
+
+
+  .section-works {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../img/bwkicks.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    h1.works-heading {
+      @include sectionHeader;
+      color: #fff;
+      text-align: center;
+    }
+
+    .section-title::after {
+      @include headerBar;
+      background: #fff;
+  }
+
+
+
+  .works-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: space-evenly;
+    margin: 50px auto;
+
+    .works {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      margin:25px;
+      background: $works-bg;
+    }
+
+
+    img {
+       height: 300px;
+       width: 300px;
+       display: block;
+       opacity: 1;
+       transition: all 1s;
+
+     }
+
+     img:hover {
+       opacity: 0.5;
+     }
+
+
+     div.works-text {
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       // z-index: 1;
+       position: absolute;
+       color: #fff;
+       text-align: center;
+
+     }
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+  //
+  //   .works-container {
+  //     width: 70%;
+  //     text-align: center;
+  //     margin: 100px auto;
+  //     display: grid;
+  //     grid-template-columns: repeat(3, 1fr);
+  //     grid-template-areas:
+  //         "works1 works2 works3"
+  //         "works4 works5 works6";
+  //         position: relative;
+  //         // margin: 1em;
+  //         // height: 300px;
+  //         // width: 100%;
+  //
+  //
+  //
+  //     // .works {
+  //     //   display: contents;
+  //
+  //       &>div {
+  //         margin: 0 auto;
+  //       }
+  //
+  //       img.works-img {
+  //         height: 300px;
+  //         width: 300px;
+  //         display: block;
+  //         filter: grayscale(100%);
+  //         transition: all 1s;
+  //       }
+  //
+  //       img.works-img:hover {
+  //         filter: grayscale(0);
+  //     }
+  //
+  //       .works-text {
+  //         position: relative;
+  //         top: 50%;
+  //         left: 50%;
+  //         transform: translate(-50%, -50%);
+  //         opacity: 0;
+  //         z-index: 1;
+  //         transition: all 1s;
+  //         color: #fff;
+  //       }
+  //
+  //     }
+  //     .works:hover .works-text {
+  //       opacity: 1;
+  //
+  //
+  //   }
+  //
+  //
+  //
+  //
+  //     .works1 {
+  //       display:grid;
+  //       grid-area: works1;
+  //     }
+  //     .works2 {
+  //       display:grid;
+  //       grid-area: works2;
+  //     }
+  //     .works3 {
+  //       display:grid;
+  //       grid-area: works3;
+  //     }
+  //     .works4 {
+  //       display:grid;
+  //       grid-area: works4;
+  //     }
+  //     .works5 {
+  //       display:grid;
+  //       grid-area: works5;
+  //     }
+  //     .works6 {
+  //       display:grid;
+  //       grid-area: works6;
+  //     }
+  //   }
+  // }

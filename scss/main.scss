@@ -1,6 +1,7 @@
 @import 'config';
 @import 'resume';
 @import 'contact';
+@import 'works';
 
 *,
 *::after,
@@ -477,28 +478,7 @@ li.logo {
   }
   }
 
-  // WORKS SECTION //
 
-    .section-works {
-      height: 100vh;
-      width: 100%;
-      overflow: hidden;
-      background-image: url("../img/bwkicks.jpg");
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover;
-
-      .works-heading {
-        @include sectionHeader;
-        color: #fff;
-      }
-
-      .section-title::after {
-        @include headerBar;
-        background: #fff;
-    }
-
-    }
 
 
 

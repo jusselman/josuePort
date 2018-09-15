@@ -92,19 +92,22 @@
     }
   }
 
-  @media(max-width:769px) {
-    .section-contact {
-      padding-bottom: -150px !important;
-    }
+  @media(max-width:540px) {
     .contact-form {
       width: 90%;
     }
   }
+
+}
+
 
   @media(max-width:540px) {
       .contact-input {
       min-width: 0 !important;
 
     }
+    .section-contact {
+      padding-bottom: 100px !important;
+    }
+
   }
-}
