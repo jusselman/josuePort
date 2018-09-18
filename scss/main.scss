@@ -47,19 +47,18 @@ body {
   margin-top: 8px;
 }
 
-.active{
-    a {
-         // color:#F38A8A;
-         // border-top: 1px solid black;
-         // border-bottom: 1px solid black;
-         // text-decoration: line-through !important;
-    // &:hover {
-    //   color: #8b8b8b !important;
-    //     }
+.active a {
+
+  color: pink;
+  // transition: all 1s;
+
+    }
+
+  // .active::before a{
+  //     background: red;
+  // }
 
 
-      }
-      }
 
 .navbar {
 	background-color: rgba(0,0,0,0);
@@ -495,7 +494,7 @@ li.logo {
 // FOOTER SECTION //
 
   footer {
-    height: 550px;
+    height: 400px;
     width: 100%;
     background-color: #000;
   }
