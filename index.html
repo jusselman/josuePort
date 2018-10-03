@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/> -->
+    <link rel="icon" href="dist/img/tabicon.png">
     <title>Light-Flavor</title>
   </head>
   <body>
@@ -15,13 +16,16 @@
   <!-- NAVBAR -->
     <nav class="navbar" id="navigation">
       <span class="open-slide">
-        <a href="#" onclick="openSlideMenu()">
+        <div onclick="openSlideMenu()">
+          <a href="#" onclick="javascript: return false">
+
           <div class="hamburger">
             <div></div>
             <div></div>
             <div></div>
           </div>
         </a>
+        </div>
       </span>
 
       <ul class="navbar-nav" id="mainNav">
@@ -39,7 +43,9 @@
     </nav>
 
     <div id="side-menu" class="side-nav">
-      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <div onclick="closeSlideMenu()">
+      <a href="#" class="btn-close" onclick="javascript:return false">&times;</a>
+    </div>
       <a href="#main" class="scroll">Home</a>
       <a href="#about" class="scroll">About</a>
       <a href="#resume" class="scroll">Résumé</a>
@@ -72,13 +78,13 @@
             </a>
           </li>
           <li>
-            <a class="social-media" href="https://www.pinterest.com/joshuausselman/">
-              <i class="fab fa-pinterest fa-2x custom-icon pinterest"></i>
+            <a class="social-media" href="https://www.linkedin.com/in/joshuausselman/">
+              <i class="fab fa-linkedin-in fa-2x custom-icon linkedin"></i>
             </a>
           </li>
           <li>
-            <a class="social-media" href="https://dribbble.com/josue_usselman">
-              <i class="fab fa-dribbble fa-2x custom-icon dribbble"></i>
+            <a class="social-media" href="https://github.com/jusselman">
+              <i class="fab fa-github fa-2x custom-icon github"></i>
             </a>
           </li>
         </ul>
@@ -127,44 +133,45 @@
         <div class="works-container">
 
 
+        <a href="#">
           <div class="works">
-            <a href="#">
-            <img src="dist/img/works1.jpg" class="works-img">
+            <img src="dist/img/gs.png" class="works-img">
             <div class="works-text">
-              <h2 class="works-title">Title</h2>
-              <p class="works-body">And here is<br> some text</p>
+              <h2 class="works-title">Glaucoma<br> Specialists<br> of San <br>Francisco</h2>
+            </div>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="works">
+            <img src="dist/img/sl.png" class="works-img">
+              <div class="works-text">
+                <h3 class="works-title">Soul-<br>Lean<br>Catering</h3>
+                <!-- <p class="works-body">And here is some text</p> -->
+              </div>
+            </div>
+            </a>
+
+          <a href="#">
+            <div class="works">
+            <img src="dist/img/dk.png" class="works-img">
+              <div class="works-text">
+                <h3 class="works-title">Beats<br>On The<br> Fly</h3>
+              </div>
             </div>
           </a>
-        </div>
 
-
-
-
-
-          <div class="works">
-            <img src="dist/img/works2.jpg" class="works-img">
-              <div class="works-text">
-                <h3 class="works-title">Title</h3>
-                <p class="works-body">And here is some text</p>
-              </div>
-            </div>
-
-          <div class="works">
-            <img src="dist/img/works1.jpg" class="works-img">
-              <div class="works-text">
-                <h3 class="works-title">Title</h3>
-                <p class="works-body">And here is some text</p>
-              </div>
-            </div>
-
-          <div class="works">
+            <a href="#">
+            <div class="works">
             <img src="dist/img/works2.jpg" class="works-img">
               <div class="works-text">
                 <h3 class="works-title">Title</h3>
                 <p class="works-body">And here is some text</p>
               </div>
           </div>
+          </a>
 
+          <a href="#">
           <div class="works">
             <img src="dist/img/works1.jpg" class="works-img">
               <div class="works-text">
@@ -172,7 +179,9 @@
                 <p class="works-body">And here is some text</p>
               </div>
           </div>
+          </a>
 
+          <a href="#">
           <div class="works">
             <img src="dist/img/works2.jpg" class="works-img">
               <div class="works-text">
@@ -180,10 +189,9 @@
                 <p class="works-body">And here is some text</p>
               </div>
           </div>
+          </a>
         </div>
-    <!-- </div> -->
-  <!-- </div> -->
-</section>
+      </section>
 
     <!-- RESUME SECTION -->
     <section class="section-resume" id="resume">
@@ -226,31 +234,33 @@
             <div class="resume-professional">
               <h1 class="professional-header">PROFESSIONAL</h1>
               <div class="wrapper">
-                <div class="res-date"><p><span class="darker">2017 - 2018</span></p></div>
-                <div class="res-prog"><h2>WEB DEVELOPMENT</h2></div>
-                <div class="res-place"><p><span class="darker">CODIFY ACADEMY</span></p></div>
-                <div class="res-desc"><p>Peering over the San Francisco bay,
-                   this institute fostered and refined my interests in web
-                   development user-experienc and design. While always a coder
-                    at heart, Codify reinforced my abilities to further express
-                     my artistic inclinations.</p></div>
+                <div class="res-date"><p><span class="darker">2018 - PRESENT</span></p></div>
+                <div class="res-prog"><h2>WEB DEVELOPER</h2></div>
+                <div class="res-place"><p><span class="darker">FREELANCE</span></p></div>
+                <div class="res-desc"><p>● Consulted with clients to outline website goals,
+                   illustrate wire frame, and site functionality ● Maintained website by
+                   updating content, implementing new technology and monitoring performance
+                   ● Wrote About Page biography, designed and shaped graphics, corrected
+                   image problems, and formatted company logos</p></div>
             </div>
             <div class="wrapper">
-              <div class="res-date"><p><span class="darker">2003 - 2007</span></p></div>
-              <div class="res-prog"><h2>BA ESPAÑOL</h2></div>
+              <div class="res-date"><p><span class="darker">2014 - 2018</span></p></div>
+              <div class="res-prog"><h2>FUNERAL DIRECTOR</h2></div>
               <div class="res-place"><p><span class="darker">University of Oregon</span></p></div>
-              <div class="res-desc"><p>In the heart of the Emerald Valley, U of O bestowed upon me
-                the gift of Romance Languages, including Spanish, French, Portuguese and Italian.
-                What's more, I devoted an entire academic year to the history of Western Art,
-                from cave paintings to Andy Warhol.</p></div>
+              <div class="res-desc"><p>● Held meetings with grieving families, primarily but not limited
+                 to Spanish-speakers, in order to plan funeral arrangements ● Maintained correspondence
+                 with county clerks, health departments, various consulates, the California Secretary
+                 of State and receiving funeral establishments in foreign countries in order to transfer
+                  human remains abroad ● Prepared translations of official documents</p></div>
           </div>
           <div class="wrapper">
             <div class="res-date"><p><span class="darker">2005</span></p></div>
-            <div class="res-prog"><h2>SEMESTER OVERSEAS</h2></div>
-            <div class="res-place"><p><span class="darker">Universidad de Oviedo</span></p></div>
-            <div class="res-desc"><p>Nestled in the northern, mountainous state of Oviedo, this program
-              abroad immersed me Spanish history, art, and gastronomy. My first time living abroad,
-              this sojourn to the old country sparked an unquenchable thirst for travel.</p></div>
+            <div class="res-prog"><h2>MANAGER</h2></div>
+            <div class="res-place"><p><span class="darker">Hotel Posada 911</span></p></div>
+            <div class="res-desc"><p>● Directed guest services including greeting, billing, and
+              providing tourist information for globally diverse clientele ● Managed hotel expenses:
+               gas, electric, water, internet, trash, remodeling, and repairs ● Organized local
+               cultural celebrations ● Maintained reservation records</p></div>
         </div>
             </div>
 
@@ -291,6 +301,38 @@
     </section> -->
 
     <footer>
+      <div class="footer-container">
+        <h1 class="footer1">LIGHT-FLAVOR</H1>
+        <h3 class="footer2">SAN FRANCISCO, CALIFORNIA</h3>
+      </div>
+      <div class="footer-container-2">
+        <p class="footer3">2018 &copy; LIGHT-FLAVOR<span class="lit">LIGHT IT UP</span></p>
+        <div class="footer_social_icons">
+
+          <!-- <div class="social-wrapper"> -->
+            <a class="facebook footer-media" href="https://www.facebook.com/josue.uselmano">
+              <i class="fab fa-facebook-f fa-3x custom-icon facebook"></i>
+            </a>
+          <!-- </div> -->
+
+            <a class="twitter footer-media" href="https://twitter.com/josue_usselman">
+              <i class="fab fa-twitter fa-3x custom-icon twitter"></i>
+            </a>
+
+            <a class="instagram footer-media" href="https://www.instagram.com/josueuselmano/">
+              <i class="fab fa-instagram fa-3x custom-icon instagram"></i>
+            </a>
+
+            <a class="linkedin footer-media" href="https://www.linkedin.com/in/joshuausselman/">
+              <i class="fab fa-linkedin-in fa-3x"></i>
+            </a>
+
+            <a class="github footer-media" href="https://github.com/jusselman">
+            <i class="fab fa-github fa-3x"></i>
+            </a>
+
+        </div>
+      </div>
 
     </footer>
 

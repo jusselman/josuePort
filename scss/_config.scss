@@ -16,3 +16,23 @@ $works-bg: rgb(179, 179, 179);
   height: 1px;
   content: '';
 }
+
+@mixin footerBar {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 1px;
+  content: '';
+  background-color: #fff;
+}
+
+@mixin footerBar2 {
+  position: absolute;
+  top: 130%;
+  left: calc(50% - 270px);
+  width: 550px;
+  height: 1px;
+  content: '';
+  background-color: #757575;
+}

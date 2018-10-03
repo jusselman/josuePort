@@ -55,13 +55,13 @@
       // bottom: 1.25em;
       left: .25em;
       right: .25em;
-      opacity: .25;
-      transition: transform ease-out .5s;
+      opacity: .75;
+      transition: transform ease-out 750ms;
 
     }
 
     &::before {
-      border-top: 300px solid #2e2e2e;
+      border-top: 300px solid #000;
       border-radius: 100%;
       // border-bottom: 1px solid #fff;
       transform: scale(0,0);
@@ -157,98 +157,14 @@
      }
 
 
+     @media(max-width: 1700px) {
+       .works-container {
+         width: 80%;
+       }
+     }
 
-
-
-
-
-
-
-
-
-
-
-
-  //
-  //   .works-container {
-  //     width: 70%;
-  //     text-align: center;
-  //     margin: 100px auto;
-  //     display: grid;
-  //     grid-template-columns: repeat(3, 1fr);
-  //     grid-template-areas:
-  //         "works1 works2 works3"
-  //         "works4 works5 works6";
-  //         position: relative;
-  //         // margin: 1em;
-  //         // height: 300px;
-  //         // width: 100%;
-  //
-  //
-  //
-  //     // .works {
-  //     //   display: contents;
-  //
-  //       &>div {
-  //         margin: 0 auto;
-  //       }
-  //
-  //       img.works-img {
-  //         height: 300px;
-  //         width: 300px;
-  //         display: block;
-  //         filter: grayscale(100%);
-  //         transition: all 1s;
-  //       }
-  //
-  //       img.works-img:hover {
-  //         filter: grayscale(0);
-  //     }
-  //
-  //       .works-text {
-  //         position: relative;
-  //         top: 50%;
-  //         left: 50%;
-  //         transform: translate(-50%, -50%);
-  //         opacity: 0;
-  //         z-index: 1;
-  //         transition: all 1s;
-  //         color: #fff;
-  //       }
-  //
-  //     }
-  //     .works:hover .works-text {
-  //       opacity: 1;
-  //
-  //
-  //   }
-  //
-  //
-  //
-  //
-  //     .works1 {
-  //       display:grid;
-  //       grid-area: works1;
-  //     }
-  //     .works2 {
-  //       display:grid;
-  //       grid-area: works2;
-  //     }
-  //     .works3 {
-  //       display:grid;
-  //       grid-area: works3;
-  //     }
-  //     .works4 {
-  //       display:grid;
-  //       grid-area: works4;
-  //     }
-  //     .works5 {
-  //       display:grid;
-  //       grid-area: works5;
-  //     }
-  //     .works6 {
-  //       display:grid;
-  //       grid-area: works6;
-  //     }
-  //   }
-  // }
+     @media(max-width:1350px) {
+       .works-container {
+         width: 90%;
+       }
+     }

@@ -4,6 +4,7 @@
 function openSlideMenu(){
   document.getElementById('side-menu').style.width = '100%';
   // document.getElementById('main').style.marginLeft = '250px';
+
 }
 
 function closeSlideMenu(){
@@ -12,7 +13,7 @@ function closeSlideMenu(){
 }
 
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 85) {
 			// $('.navbar').css("backgroundColor","rbga(0,0,0,0)");
@@ -62,9 +63,9 @@ $(document).ready(function() {
 
       if ( sectionOffset <= scrollbarLocation ) {
         $(this).parent().addClass('active');
-        $(this).parent().addClass('active::before');
+        // $(this).parent().addClass('active::before');
         $(this).parent().siblings().removeClass('active');
-        $(this).parent().siblings().removeClass('active::before');
+        // $(this).parent().siblings().removeClass('active::before');
       }
     })
   })
