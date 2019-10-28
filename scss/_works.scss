@@ -17,7 +17,7 @@ h1.works-heading {
 }
 
 .section-title::after {
-  @include headerBar;
+  @include headerWorks;
   background: #fff;
 }
 
@@ -31,8 +31,6 @@ h1.works-heading {
 
 .works {
   position: relative;
-  // height: 300px;
-  // width: 300px;
   margin: 25px;
   background: $works-bg;
   filter: grayscale(1);
@@ -121,6 +119,47 @@ img.works-img {
   margin-bottom: 0;
 }
 
+.works-git {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: rgb(210, 210, 210);
+  font-size: 1.5rem;
+  width: min-content;
+  margin: 0 auto;
+
+  &::after {
+    content: '';
+    display: block;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    right: 0;
+    transform: translateX(0);
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+    transition: width .3s;
+  }
+
+  &:hover::before {
+    transform: translateX(100);
+    transition: width .3s;
+  }
+}
+
 @media(max-width: 1700px) {
   .works-container {
     width: 80%;
@@ -130,5 +169,11 @@ img.works-img {
 @media(max-width:1350px) {
   .works-container {
     width: 90%;
+  }
+}
+
+@media(max-width:1350px) {
+  .works-container {
+    margin: 0 auto;
   }
 }
